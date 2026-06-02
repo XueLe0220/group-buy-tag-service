@@ -10,12 +10,16 @@
     <artifactId>group-buy-tag-api</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>cn.xuele</groupId>
             <artifactId>group-buy-common-types</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
 

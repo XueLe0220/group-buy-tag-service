@@ -10,4 +10,17 @@
 
     <artifactId>group-buy-tag-trigger</artifactId>
 
+
+    <dependencies>
+
+        <dependency>
+            <groupId>cn.xuele</groupId>
+            <artifactId>group-buy-tag-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.xuele</groupId>
+            <artifactId>group-buy-tag-domain</artifactId>
+        </dependency>
+
+    </dependencies>
 </project>

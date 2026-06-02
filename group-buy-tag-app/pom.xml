@@ -11,6 +11,18 @@
 
     <packaging>jar</packaging>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>cn.xuele</groupId>
+            <artifactId>group-buy-tag-trigger</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.xuele</groupId>
+            <artifactId>group-buy-tag-infrastructure</artifactId>
+        </dependency>
+    </dependencies>
+
 
 
 </project>

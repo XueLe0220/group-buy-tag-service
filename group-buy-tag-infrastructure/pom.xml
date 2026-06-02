@@ -10,4 +10,14 @@
 
     <artifactId>group-buy-tag-infrastructure</artifactId>
 
+    <dependencies>
+
+
+        <!--项目模块-->
+        <dependency>
+            <groupId>cn.xuele</groupId>
+            <artifactId>group-buy-tag-domain</artifactId>
+        </dependency>
+
+    </dependencies>
 </project>

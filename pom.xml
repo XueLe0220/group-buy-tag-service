@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.xuele</groupId>
@@ -19,16 +20,51 @@
         <java.version>21</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mybatis-spring-boot.version>3.0.4</mybatis-spring-boot.version>
-        <mysql.version>8.2.0</mysql.version>
-        <fastjson.version>2.0.28</fastjson.version>
-        <fastjson2.version>2.0.43</fastjson2.version>
-        <guava.version>32.1.3-jre</guava.version>
-        <commons-lang3.version>3.12.0</commons-lang3.version>
-        <redisson.version>3.45.1</redisson.version>
 
-        <dubbo.version>3.3.0</dubbo.version>
     </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <dependency>
+                <groupId>cn.xuele</groupId>
+                <artifactId>group-buy-common-types</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+
+            <!--项目模块-->
+            <dependency>
+                <groupId>cn.xuele</groupId>
+                <artifactId>group-buy-tag-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xuele</groupId>
+                <artifactId>group-buy-tag-app</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xuele</groupId>
+                <artifactId>group-buy-tag-domain</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xuele</groupId>
+                <artifactId>group-buy-tag-infrastructure</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xuele</groupId>
+                <artifactId>group-buy-tag-trigger</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+        </dependencies>
+
+
+    </dependencyManagement>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

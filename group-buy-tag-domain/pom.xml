@@ -10,5 +10,11 @@
     <artifactId>group-buy-tag-domain</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.xuele</groupId>
+            <artifactId>group-buy-common-types</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

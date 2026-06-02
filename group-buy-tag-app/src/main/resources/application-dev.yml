@@ -30,10 +30,25 @@ spring:
     connection-test-query: SELECT 1
   type: com.zaxxer.hikari.HikariDataSource
 
-# MyBatis 配置【如需使用记得打开】
-#mybatis:
-#  mapper-locations: classpath:/mybatis/mapper/*.xml
-#  config-location:  classpath:/mybatis/config/mybatis-config.xml
+redis:
+  sdk:
+    config:
+      mode: standalone
+      standalone:
+        host: ${REDIS_HOST:124.211.233.121}
+        port: ${REDIS_PORT:16379}
+      poolSize: 64
+      minIdleSize: 10
+      idleTimeout: 10000
+      connectTimeout: 10000
+      retryAttempts: 3
+      retryInterval: 1000
+      pingInterval: 0
+      keepAlive: true
+
+mybatis:
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  config-location: classpath:/mybatis/config/mybatis-config.xml
 
 # 日志
 logging:

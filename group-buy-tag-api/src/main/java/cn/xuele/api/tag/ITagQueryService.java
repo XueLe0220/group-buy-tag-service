@@ -14,4 +14,5 @@ public interface ITagQueryService {
 
     TagQueryResponseDTO matchCrowdTag(TagQueryRequestDTO request);
 
+
 }

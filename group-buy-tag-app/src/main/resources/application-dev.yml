@@ -52,6 +52,18 @@ mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
   config-location: classpath:/mybatis/config/mybatis-config.xml
 
+dubbo:
+  application:
+    name: group-buy-tag-service
+    logger: slf4j
+  protocol:
+    name: dubbo
+    port: ${DUBBO_PROTOCOL_PORT:20891}
+  registry:
+    address: nacos://${NACOS_HOST:124.221.233.121}:${NACOS_PORT:8848}
+  scan:
+    base-packages: cn.xuele.tag.trigger.rpc
+
 # 日志
 logging:
   level:

@@ -2,6 +2,7 @@ package cn.xuele.api.tag;
 
 import cn.xuele.api.tag.dto.TagQueryRequestDTO;
 import cn.xuele.api.tag.dto.TagQueryResponseDTO;
+import cn.xuele.common.types.response.Response;
 
 /**
  * 人群标签查询 RPC 契约，供其他服务判断用户是否命中指定标签
@@ -12,7 +13,7 @@ import cn.xuele.api.tag.dto.TagQueryResponseDTO;
  */
 public interface ITagQueryService {
 
-    TagQueryResponseDTO matchCrowdTag(TagQueryRequestDTO request);
+    Response<TagQueryResponseDTO> matchCrowdTag(TagQueryRequestDTO request);
 
 
 }

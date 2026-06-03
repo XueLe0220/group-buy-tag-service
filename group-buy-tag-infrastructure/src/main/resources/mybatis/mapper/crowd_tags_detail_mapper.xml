@@ -18,10 +18,6 @@
             (#{item.tagId}, #{item.userId}, now(), now())
         </foreach>
     </insert>
-    <select id="queryTagIdByUserId" resultType="java.lang.String" parameterType="java.lang.String">
-        select tag_id
-        from crowd_tags_detail
-        where user_id = #{userId}
-    </select>
+
 
 </mapper>

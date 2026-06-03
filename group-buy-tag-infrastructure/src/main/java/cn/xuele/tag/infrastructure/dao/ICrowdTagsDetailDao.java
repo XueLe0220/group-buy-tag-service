@@ -25,5 +25,4 @@ public interface ICrowdTagsDetailDao {
      */
     void addCrowdTagsUsers(List<CrowdTagsDetail> crowdTagsDetailReqList);
 
-    String queryTagIdByUserId(String userId);
 }

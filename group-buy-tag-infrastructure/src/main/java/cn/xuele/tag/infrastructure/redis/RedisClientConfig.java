@@ -25,7 +25,7 @@ public class RedisClientConfig {
         Config config = new Config();
 
         if ("cluster".equalsIgnoreCase(properties.getMode())) {
-              ClusterServersConfig clusterServersConfig = config.useClusterServers()
+            ClusterServersConfig clusterServersConfig = config.useClusterServers()
                     .addNodeAddress(toRedisAddresses(properties.getCluster().getNodes()))
                     .setConnectTimeout(properties.getConnectTimeout())
                     .setRetryAttempts(properties.getRetryAttempts())
@@ -59,10 +59,16 @@ public class RedisClientConfig {
             throw new IllegalArgumentException("redis cluster nodes must not be empty");
         }
 
-        return nodes.stream()
+        String[] addresses = nodes.stream()
                 .filter(node -> node != null && !node.isBlank())
+                .map(String::trim)
                 .map(node -> node.startsWith("redis://") ? node : "redis://" + node)
                 .toArray(String[]::new);
+
+        if (addresses.length == 0) {
+            throw new IllegalArgumentException("redis cluster nodes must not be empty");
+        }
+        return addresses;
     }
 
 }

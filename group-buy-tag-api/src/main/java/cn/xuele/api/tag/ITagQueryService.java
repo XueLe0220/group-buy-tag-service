@@ -4,7 +4,7 @@ import cn.xuele.api.tag.dto.TagQueryRequestDTO;
 import cn.xuele.api.tag.dto.TagQueryResponseDTO;
 
 /**
- * TODO: 类描述
+ * 人群标签查询 RPC 契约，供其他服务判断用户是否命中指定标签
  *
  * @author XueLe
  * @version 1.0.0

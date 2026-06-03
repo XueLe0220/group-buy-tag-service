@@ -16,26 +16,28 @@ thread:
 spring:
   datasource:
     username: tag_user
-    password: xuele_root_123456
+    password: tag_password_123456
     url: jdbc:mysql://124.211.233.121:3306/group_buy_tag?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
-  hikari:
-    pool-name: Retail_HikariCP
-    minimum-idle: 15 #最小空闲连接数量
-    idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
-    maximum-pool-size: 25 #连接池最大连接数，默认是10
-    auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
-    max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
-    connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
-    connection-test-query: SELECT 1
-  type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: Retail_HikariCP
+      minimum-idle: 15 #最小空闲连接数量
+      idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
+      maximum-pool-size: 25 #连接池最大连接数，默认是10
+      auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
+      connection-test-query: SELECT 1
+    type: com.zaxxer.hikari.HikariDataSource
 
+# redis配置
 redis:
   sdk:
     config:
       mode: standalone
+      password: ${REDIS_PASSWORD:xuele_redis_123456}
       standalone:
-        host: ${REDIS_HOST:124.211.233.121}
+        host: ${REDIS_HOST:124.221.233.121}
         port: ${REDIS_PORT:16379}
       poolSize: 64
       minIdleSize: 10
@@ -43,7 +45,7 @@ redis:
       connectTimeout: 10000
       retryAttempts: 3
       retryInterval: 1000
-      pingInterval: 0
+      pingInterval: 1000
       keepAlive: true
 
 mybatis:

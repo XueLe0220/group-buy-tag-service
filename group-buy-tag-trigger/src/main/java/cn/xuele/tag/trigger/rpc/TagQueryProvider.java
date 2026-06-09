@@ -1,8 +1,8 @@
 package cn.xuele.tag.trigger.rpc;
 
-import cn.xuele.api.tag.ITagQueryService;
-import cn.xuele.api.tag.dto.TagQueryRequestDTO;
-import cn.xuele.api.tag.dto.TagQueryResponseDTO;
+import cn.xuele.tag.api.ITagQueryService;
+import cn.xuele.tag.api.dto.TagQueryRequestDTO;
+import cn.xuele.tag.api.dto.TagQueryResponseDTO;
 import cn.xuele.common.types.enums.ResponseCode;
 import cn.xuele.common.types.response.Response;
 import cn.xuele.tag.domain.service.ITagService;

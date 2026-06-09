@@ -1,4 +1,4 @@
-package cn.xuele.tag.config;
+package cn.xuele.tag.app.config;
 
 import cn.xuele.tag.domain.adapter.ITagRepository;
 import cn.xuele.tag.domain.service.ITagService;

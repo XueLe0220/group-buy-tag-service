@@ -1,7 +1,7 @@
-package cn.xuele.api.tag;
+package cn.xuele.tag.api;
 
-import cn.xuele.api.tag.dto.TagQueryRequestDTO;
-import cn.xuele.api.tag.dto.TagQueryResponseDTO;
+import cn.xuele.tag.api.dto.TagQueryRequestDTO;
+import cn.xuele.tag.api.dto.TagQueryResponseDTO;
 import cn.xuele.common.types.response.Response;
 
 /**

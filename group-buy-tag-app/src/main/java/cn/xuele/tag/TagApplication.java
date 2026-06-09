@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.0.0
  * @since 2026/06/03 15:33
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "cn.xuele.tag")
 @EnableDubbo
 public class TagApplication {
     public static void main(String[] args) {

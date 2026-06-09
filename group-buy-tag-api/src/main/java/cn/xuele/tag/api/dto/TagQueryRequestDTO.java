@@ -1,4 +1,4 @@
-package cn.xuele.api.tag.dto;
+package cn.xuele.tag.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
